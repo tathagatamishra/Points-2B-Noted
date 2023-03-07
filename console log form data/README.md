@@ -4,6 +4,11 @@
 To get form data and console log it on clicking the submit button, you can add an event listener to the submit button that listens for the "click" event, and then retrieves the data from the form and logs it to the console.
 
 ```
+userData = form.elements.data.value  // important line
+```
+`elements`  DO NOT FORGET ABOUT `S`  
+
+```
 <html>
   <head>
     <title>FORM</title>
