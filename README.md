@@ -1,2 +1,7 @@
-# Points-2B-Noted
-Lots of snippets with tutorials and facts of every programming language I used
+<h1 align="center">Points-2B-Noted</h1>
+
+<p align="center">
+  Lots of snippets with tutorials and facts of different programming languages.
+  <br>
+  Each folder contains useful snippets of different languages.
+</p>
