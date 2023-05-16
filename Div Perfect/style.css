@@ -1,0 +1,13 @@
+html,
+body {
+  margin: 0px;
+}
+
+.App {
+  height: 100vh;
+
+  box-sizing: border-box;
+
+  background: whitesmoke;
+  border: solid 30px lightskyblue;
+}
