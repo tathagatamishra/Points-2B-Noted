@@ -144,3 +144,53 @@ b. HTTPS:443 Listener:
 1. Try accessing both dmassociates.in and server.dmassociates.in
 2. Verify that HTTP requests redirect to HTTPS
 3. Verify that each domain routes to the correct target group
+
+
+---
+
+I am running my backend and frontend in 2 seperate folder in aws single ec2 using pm2, frontend on 3000 and backend on 2610 port, I want to connect it with alb
+
+how to do
+* Register your EC2 instance to both target groups with the respective ports
+
+---
+
+Certainly, I can guide you through the process of registering your EC2 instance to both target groups with their respective ports. This is a crucial step in setting up your Application Load Balancer (ALB) to work with your frontend and backend services.
+
+Here's a step-by-step guide on how to do this:
+
+1. Open the AWS Management Console and navigate to the EC2 service.
+
+2. In the left sidebar, under "Load Balancing", click on "Target Groups".
+
+3. For each of your target groups (frontend and backend), follow these steps:
+
+   a. Select the target group you want to add the instance to.
+   
+   b. Click on the "Targets" tab in the lower pane.
+   
+   c. Click on "Edit" to modify the registered targets.
+   
+   d. In the "Instances" section, you should see your EC2 instance listed.
+   
+   e. Select your EC2 instance by checking the box next to it.
+   
+   f. In the "Port" field for the selected instance, enter the appropriate port:
+      - For the frontend target group, enter 3000
+      - For the backend target group, enter 2610
+   
+   g. Click "Add to registered" to move the instance to the registered targets list.
+   
+   h. Review the changes and click "Save" to confirm.
+
+4. Repeat this process for both your frontend and backend target groups.
+
+After you've completed these steps for both target groups, your EC2 instance will be registered to handle traffic for both your frontend and backend services through the ALB.
+
+Remember:
+- For the frontend target group, use port 3000
+- For the backend target group, use port 2610
+
+Once you've registered the instances, the ALB will be able to route traffic to the correct service based on the rules you've set up.
+
+Is there anything else you'd like me to clarify about this process?
